@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    display: block;
+}
+
+
+/* MENU */
+.menu {
+    position: relative;
+    width: 100%;
+    height: 11.5vh;
+    z-index: 2;
+}
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.menu__nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 50vh;
+    z-index: 2;
+    transition: .4s linear;
+}
+
+.show__nav {
+    top: 10%;
+}
+
+.menu__nav--list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+}
+
+.menu__logo {
+    padding: 8px 17px;
+    border: solid 1px rgb(255, 71, 57);
+    border-radius: 15px 0px 15px 15px;
+    margin: 15px;
+    background-color: transparent;
+    letter-spacing: 1px;
+}
+
+.menu__hamburger {
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+.fas {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* HEADER */
+.header__logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.header__logo__container {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+header h3 {
+    width: 90%;
+    font-weight: 100;
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    padding: 10px;
+}
+
+header h2 {
+    top: 50%;
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+    font-weight: 550;
+}
+
+/* PSEUDOELEMENTS STANTARD SETTINGS */
+header h3::after,
+header h3::before,
+.our-team__container h3::before,
+.our-team__container h3::after,
+.portfolio__container h3::before,
+.portfolio__container h3::after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 1px #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+header h3::before {
+    right: 63%;
+    margin-right: 10px;
+}
+
+header h3::after {
+    left: 63%;
+    margin-left: 10px;
+}
+
+.header__btn--check {
+    position: absolute;
+    left: 0;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header__btn--arrow {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border-style: none;
+    overflow: hidden;
+}
+
+.fa-angle-double-down {
+    display: block;
+    color: #fff;
+    transform: translateY(-120%);
+    animation: arrow 1.5s linear infinite;
+}
+
+/* HEADER CIRCLES */
+.header__circle--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.header__circle--container p {
+    width: 80%;
+    margin: 25px 0;
+    font-size: 1.2rem;
+}
+
+/* OUR TEAM */
+.our-team,
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.our-team__container,
+.portfolio__container {
+    position: relative;
+}
+
+.our-team__logo,
+.portfolio__logo {
+    outline: 2px solid #fff;
+    outline-offset: -15px;
+}
+
+.our-team__container h3,
+.our-team__container h2,
+.portfolio__container h3,
+.portfolio__container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.our-team__container h3,
+.portfolio__container h3 {
+    width: 40%;
+    font-size: 1.3rem;
+    top: 35%;
+    font-weight: 100;
+}
+
+.our-team__container h2,
+.portfolio__container h2 {
+    top: 55%;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.our-team__container h3::before,
+.portfolio__container h3::before {
+    right: 73%;
+    margin-right: 5px;
+}
+
+.our-team__container h3::after,
+.portfolio__container h3::after {
+    left: 73%;
+    margin-left: 5px;
+}
+
+.our-team__container--adrianna,
+.our-team__container--olivia,
+.our-team__container--thomas,
+.our-team__container--taylor {
+    position: relative;
+    min-height: 60vh;
+}
+
+.our-team__container--paragraphs {
+    margin-top: 5%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    min-height: 50%;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+}
+
+.our-team__container--paragraphs * {
+    align-self: center;
+    width: 70%;
+}
+
+.our-team__container--paragraphs h2 {
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.our-team__container--paragraphs h3 {
+    text-transform: capitalize;
+}
+
+.our-team__container--paragraphs h3::after {
+    content: "";
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+    height: 3px;
+    background: rgb(255, 96, 50);
+}
+
+.our-team__container--paragraphs p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.our-team__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50%;
+}
+
+.our-team__img::after {
+    content: "";
+    position: absolute;
+    width: calc(90% - 2px);
+    height: 90%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #fff;
+    border-top: none;
+}
+
+.our-team__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.our-team__img img {
+    width: 100%;
+}
+
+.our-team__container--taylor>div>h3 {
+    text-transform: uppercase;
+}
+
+/* PORTFOLIO */
+/* Portfolio container edits also in OUR TEAM section */
+
+.portfolio__container h3 {
+    width: 60%;
+}
+
+.portfolio__container h2 {
+    letter-spacing: 6px;
+}
+
+.portfolio__container h3::before {
+    right: 81%;
+}
+
+.portfolio__container h3::after {
+    left: 81%;
+}
+
+.portfolio__projects {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 0 0;
+}
+
+.portfolio__projects img {
+    display: block;
+    width: 100%;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.portfolio__projects img:hover {
+    width: 100%;
+    filter: grayscale(0%);
+}
+
+/* ANIMATIONS */
+
+@keyframes arrow {
+    100% {
+        transform: translateY(120%);
+    }
+}
+
+@keyframes circleOne {
+    100% {
+        stroke-dasharray: 250;
+        stroke-dashoffset: -100;
+    }
+}
+
+@keyframes circleTwo {
+    100% {
+        stroke-dasharray: 120.69 494.80;
+        stroke-dashoffset: -150;
+    }
+}
+
+@keyframes circleThree {
+    100% {
+        stroke-dasharray: 450 600;
+        stroke-dashoffset: -100;
+    }
+}
